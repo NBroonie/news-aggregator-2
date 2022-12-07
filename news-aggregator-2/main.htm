@@ -24,9 +24,21 @@
 
             <div class= "topnav-right">
                 <!-- User with link to proile -->
-                <a href="profile.htm">User</a>
+                <a id= "user-profile" href="profile.htm">Username</a>
+                <!-- button that updates with user name -->
+                <script>
+                    var user = document.getElementById("user-profile");
+                    user.innerHTML = sessionStorage.getItem("user");
+                </script>
                 <!-- Link to logout -->
-                <a href="home.htm">Logout</a>
+                <a id ="logout" href="home.htm">Logout</a>
+                <!-- button that clears session storage -->
+                <script>
+                    var logout = document.getElementById("logout");
+                    logout.onclick = function() {
+                        sessionStorage.clear();
+                    }
+                </script>
             </div>
         </div>
         <div class="main-lhs">
@@ -45,5 +57,6 @@
         </div>
     </div> 
 </div>
+<script src="script.js"></script>
 </body>
 </html>
