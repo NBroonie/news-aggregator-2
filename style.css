@@ -26,20 +26,23 @@ html,body {
     padding-top: 60px;
 }
 
-#mainInSidenav {
-  background-color: gray;
-    border-right-width: 3px;
-    border-color: gray;
+/* Style sidebar links: guidance from: https://www.w3schools.com/howto/howto_css_sidebar_icons.asp */
+/* to be able to distance the icons from eachother i had to put them in flexbox and make the border color the same as the nav*/
+#mainInSidenav, #favInSidenav {
+  background-color: white;
+    border-right-width: 4px;
+    border-color: #373c55;
     border-style: solid;
     box-sizing: border-box;
-    padding: 10px 0px 10px 0px;
-    border-radius: 5px;
-    position: relative; left: 20px;
+    padding: 2px 20px 1px 10px;
+    border-radius: 7px;
+    position: relative; left: 15px;
+    display: flex;
+    justify-content: right;
     }
-
-    .bi-house-fill{
+    .bi-house-fill, .bi-suit-heart-fill{
         color: black;
-        background-color: gray;
+        background-color: white;
 
    }
 
