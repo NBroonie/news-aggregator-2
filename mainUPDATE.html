@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+<!--Wrapper class makes sure everything stays on the page - none goes into sides !-->
+    <div class="wrapper">
+    
+    <!-- div for the side navigation bar -->
+    <div class="sidenav">       
+        <!-- button with link to main page -->
+        <a href="main.html">Main</a>
+
+        <!-- button with link to favourites page -->
+        <a href="favourites.html">Favourites</a>
+    </div>
+
+    <!-- div for the main body of the page -->
+    <div class="main">
+        
+        <!-- div for the top navigation bar -->
+        <div class="topnav">
+        
+            <!-- Search form that links to search.html -->
+            <form action="search.html">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit" id="searchButton">Search</button>
+            </form>
+            <!-- div for the right hand side of the navigation bar to include buttons -->    
+            <div class= "topnav-right">
+                
+                <!-- User with link to proile -->
+                <a id= "user-profile" href="profile.html">Username</a>
+                <!-- call script at this point to change the text on the page -->
+                
+                <script>
+                    // get the profile element from the page
+                    let userprofile = document.getElementById("user-profile");
+                    // set the text of the element to the value stored in the session storage                    
+                    userprofile.innerHTML = sessionStorage.getItem("user");
+                </script>
+
+
+                <!-- Link to logout -->
+                <!-- TASK 1B-->
+                <a id ="logout-button" href="home.html">Logout</a>
+                
+            </div>
+        </div>
+
+        <!-- main content for the page that will be changed for each page -->
+        <div class="main-lhs">
+            <!-- News content here -->
+            <p> News </p>
+            <div class="main-article">
+                <!-- Div for the lead article -->
+                <div id = "article-0">
+                    Article 0
+                </div>
+                <div class="article-foot">
+                    <form action="article.html">
+                        <button id="goto-0">Read</button>
+                    </form>
+                </div>
+            </div>
+            <div class="other-articles">
+                <!-- Divs for the other 6 articles -->
+                <!-- TODO: Set image from main-api.js -->
+                
+                <div class = "other-article">
+                    <!-- Article 1 -->
+                    <div class="article-image">
+                        Article Image here
+                    </div>
+                    <div class="article-title"> 
+                        <p id = "article-1"> Article 1 </p>
+                    </div>
+                    <div class="article-foot">
+                        <button id="goto-1">Read</button>
+                    </div>
+                </div>
+
+                <div class = "other-article">
+                    <!-- Article 2-->
+                    <div class="article-image">
+                        Article Image here
+                    </div>
+                    <div class="article-title"> 
+                        <p id = "article-2"> Article 2 </p>
+                    </div>
+                    <div class="article-foot">
+                        <form action="article.html">
+                            <button id="goto-2">Read</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class = "other-article">
+                    <!-- Article 3-->
+                    <div class="article-image">
+                        Article Image here
+                    </div> 
+                    <div class="article-title"> 
+                        <p id = "article-3"> Article 3 </p>
+                    </div>
+                    <div class="article-foot">
+                        <button id="goto-3">Read</button>
+                    </div> 
+                </div>
+
+                <div class = "other-article">
+                    <!-- Article 4-->
+                    <div class="article-image">
+                        Article Image here
+                    </div>
+                    <div class="article-title"> 
+                        <p id = "article-4"> Article 4 </p>
+                    </div> 
+                    <div class="article-foot">
+                        <button id="goto-4">Read</button>
+                    </div>
+                </div>
+
+                <div class = "other-article">
+                    <!-- change -->
+                    <!-- Article 5-->
+                    <div class="article-image">
+                        Article Image here
+                    </div>
+                    <div class="article-title"> 
+                        <p id = "article-5"> Article 5 </p>
+                    </div> 
+                    <div class="article-foot">
+                        <button id="goto-5">Read</button>
+                    </div>
+                </div>
+
+                <div class = "other-article">
+                    <!-- Article 6-->
+                    <div class="article-image">
+                        Article Image here
+                    </div>
+                    <div class="article-title"> 
+                        <p id = "article-6"> Article 6 </p>
+                    </div>
+                    <div class="article-foot">
+                        <button id="goto-6">Read</button>
+                    </div>
+                </div>                   
+
+            </div>
+        </div>
+        <div class="main-rhs">
+            <p>Weather</p>
+            <!-- Weather content here -->
+
+            <div class="weather">
+                <div id="weather-time"> Date & time here</div>
+            </div>
+            <div class="weather">
+                <div id="weather-today">
+                    <div id="weather-temp"> Temperature here</div>
+                    <div id="weather-sunrise"> Icon here</div>
+                    <div id="weather-sunset"> Icon here</div>           
+                </div>
+            </div>
+            <div class="weather">
+                <table id="weather-forecast">
+                    <!-- 10/12 WAIT FOR MARIA TO PUSH -->
+                </table>
+            </div>
+        </div>
+        <!-- main content ends -->
+
+    </div> 
+</div>
+<script src="script.js"></script>
+<script src="main-api.js"></script>
+</body>
+</html>

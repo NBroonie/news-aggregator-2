@@ -114,3 +114,25 @@ html,body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+/* Citation : https://codepen.io/veekungx/pen/MWgvBxe */
+/* Flex - Cross Browser CSS */
+#weather-forecast thead {
+    display: flex;
+    flex-shrink: 0;
+    min-width: min-content;
+  }
+  #weather-forecast  tbody {
+      display: flex;
+  }
+  #weather-forecast  tr {
+    display: flex;
+    flex-direction: column;
+    min-width: min-content;
+    flex-shrink: 0;
+  }
+  #weather-forecast  td, #weather-forecast  th {
+    display: block;
+  }
+
+/* Citation end */
