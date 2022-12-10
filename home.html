@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+    <!--Wrapper class makes sure everything stays on the page - none goes into sides !--> 
+    <div class="wrapper">
+
+        <!-- Div for the app title -->
+        <div class="app-title">
+            <h1>News App</h1>
+        </div>
+
+
+        <!-- Div for the login form-->
+        <!-- TASK 1a -->
+        <div class="login">
+            <p> Login form here </p>
+
+            <!-- Login form takes text inputs and will run script.js on submit --->
+            <!-- see LOGIN FORM -->
+            <form action="home.html" id="loginForm">
+                <input type="text" placeholder="Username" id="username" name="username">
+                <input type="text" placeholder="Password" id="password" name="password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+
+        <!-- Div for the signup form -->
+        <!-- TASK 2a -->
+        <div class="signup">
+            <p> Signup form here </p>
+
+            <!-- Signup form takes text inputs and will run script.js on submit --->
+            <!-- see SIGNUP FORM -->
+            <form action="home.html" id="signupForm">
+                <input type="text" placeholder="Username" id="new-username" name="new-username">
+                <input type="text" placeholder="Password" id="new-password" name="new-password">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+
+    </div> 
+</div>
+
+<!-- load javascript file -->
+<script src="home-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+<!--Wrapper class makes sure everything stays on the page - none goes into sides !-->
+    <div class="wrapper">
+    
+    <!-- div for the side navigation bar -->
+    <div class="sidenav">       
+        <!-- button with link to main page -->
+        <a href="main.html">Main</a>
+
+        <!-- button with link to favourites page -->
+        <a href="favourites.html">Favourites</a>
+    </div>
+
+    <!-- div for the main body of the page -->
+    <div class="main">
+        
+        <!-- div for the top navigation bar -->
+        <div class="topnav">
+        
+            <!-- Search form that links to search.html -->
+            <form action="search.html">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Search</button>
+
+            <!-- div for the right hand side of the navigation bar to include buttons -->    
+            <div class= "topnav-right">
+                
+                <!-- User with link to proile -->
+                <a id= "user-profile" href="profile.html">Username</a>
+                <!-- call script at this point to change the text on the page -->
+                
+                <script>
+                    // get the profile element from the page
+                    let userprofile = document.getElementById("user-profile");
+                    // set the text of the element to the value stored in the session storage                    
+                    userprofile.innerHTML = sessionStorage.getItem("user");
+                </script>
+
+
+                <!-- Link to logout -->
+                <!-- TASK 1B-->
+                <a id ="logout-button" href="home.html">Logout</a>
+                
+            </div>
+        </div>
+
+        <!-- main content for the page that will be changed for each page -->
+        <div class="profile">
+            <!-- Profile form here -->
+            
+            <!-- Update Profile -->
+            <!-- TASK 2c -->
+            <p> Change Username </p>
+            <!-- Form to change username -->
+            <form action="profile.html" id="changeUsername">
+                <input type="text" placeholder= "New Username" id="change-username" name="change-username">
+                <button type="submit">Change Username</button>
+            </form>
+            
+            <!-- Select favourite categories -->
+            <!-- TASK 2d -->
+            <p> Select Favourite News Categories </p>
+            <!-- Check boxes to select news categories, business, sport, showbiz-->
+            <form action="profile.html">
+                <input type="checkbox" name="business" value="business"> Business<br>
+                <input type="checkbox" name="sport" value="sport"> Sport<br>
+                <input type="checkbox" name="showbiz" value="showbiz"> Showbiz<br>
+                <input type="submit" value="Submit">
+            </form>
+            
+            <p> Delete Profile </p>
+            <!-- Button to delete profile -->
+            <!-- TASK 2b -->
+            <form action="home.html">
+                <input type="submit" value="Delete Profile">
+            </form>
+
+        </div>
+        <!-- main content ends -->
+
+    </div> 
+</div>
+<script src="script.js"></script>
+<script src="profile-script.js"></script>
+</body>
+</html>
