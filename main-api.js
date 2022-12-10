@@ -31,6 +31,9 @@ async function getNews() {
     var news = await response.json();
     console.log(news);
 
+    // store news in sessionStorage
+    sessionStorage.setItem('news', JSON.stringify(news));
+
     // return news after it has been fetched
     return news;
 
@@ -184,8 +187,14 @@ var buttons = document.getElementsByTagName("button");
     // for each button log the button id to the console when clicked
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
-            // alert user that the button has been clicked
-            alert("Button " + buttons[i].id + " has been clicked");
+
+            // from buttons[i].id get the article number
+            articleNumber = buttons[i].id.split('-')[1];
+            // store the article number in sessionStorage
+            sessionStorage.setItem("articleNumber", articleNumber);
+
+
+
             // redirect user to article.html;
             window.location.href = "article.html";
         });
