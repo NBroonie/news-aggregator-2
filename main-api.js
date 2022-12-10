@@ -119,10 +119,77 @@ getWeather().then(weather => {
     // get 7 day forecast 4b
     forecast = weather.daily;
 
-    //
+
+    // 10/12 WAIT FOR MARIA TO PUSH // 
+
+    // create a new array to store the 7 day forecast
+    forecast7Day = [];
+
+    // for each day in the forecast
+    for (let i = 0; i < 7; i++) {
+
+        // get the day
+        day = forecast[i].dt;
+        // get the date from the day
+        day = new Date(day*1000);
+        // get the day of the week from the date
+        day = day.toDateString().split(' ')[0];
+
+        // get the temperature
+        temp = forecast[i].temp.day;
+
+        // get the weather
+        weather = forecast[i].weather[0].main;
+
+        // create a new object to store the day, temperature and weather
+        dayForecast = {
+            day: day,
+            temp: temp,
+            weather: weather
+        }
+
+        // add the dayForecast object to the forecast7Day array
+        forecast7Day.push(dayForecast);
+
+    }
+
+
+
+    // Citation: https://www.valentinog.com/blog/html-table/
+
+      function generateTable(table, data) {
+        for (let element of data) {
+          let row = table.insertRow();
+          for (key in element) {
+            let cell = row.insertCell();
+            let text = document.createTextNode(element[key]);
+            cell.appendChild(text);
+          }
+        }
+      }
+      
+      let table = document.getElementById("weather-forecast");
+//      let data = Object.keys(mountains[0]);
+//      generateTableHead(table, data);
+      generateTable(table, forecast7Day);
+
+    // Citation end
+
+    // 10/12 WAIT FOR MARIA TO PUSH // 
 
 });
 
+
+var buttons = document.getElementsByTagName("button");
+    // for each button log the button id to the console when clicked
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+            // alert user that the button has been clicked
+            alert("Button " + buttons[i].id + " has been clicked");
+            // redirect user to article.html;
+            window.location.href = "article.html";
+        });
+    }
 
 
 });
