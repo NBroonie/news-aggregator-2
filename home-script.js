@@ -22,7 +22,10 @@ signupForm.addEventListener("submit", function(event) {
   // Create a new user object
   let user = {
     "username": username,
-    "password": password
+    "password": password,
+    "fav-cat": null,
+    "read-article": [],
+    "fav-article": []
   };
 
   // create a filename for the user
@@ -67,8 +70,7 @@ loginForm.addEventListener("submit", function(event) {
   // Create a new user object
   let user = {
     "username": username,
-    "password": password,
-    "fav-cat": null
+    "password": password
   };
 
   // create a filename for the user

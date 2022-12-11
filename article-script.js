@@ -16,24 +16,44 @@ document.addEventListener("DOMContentLoaded", function() {
     var article = news.articles[articleNumber];
 
 
-    //load website content from article.url
-    var articleURL = article.url;
 
-    console.log(articleURL);
+        console.log(article);
+        // get the article title
+        var title = article.title;
+        document.getElementById("article-title").innerHTML = title;
 
-    fetch(articleURL, {mode: "no-cors"}).then((resp) => resp.text()).then(data => {
-        // Initialize the document parser
-        const parser = new DOMParser();
-        let doc = parser.parseFromString(data, 'application/xhtml+xml');
-;
+        // get the article url
+        var url = article.url;
+        document.getElementById("article-link").innerHTML = url;
+
+        document.getElementById("article-link").href = url;
+
+        // get the userObject from localStorage
+        var userObject = JSON.parse(localStorage.getItem(sessionStorage.getItem("user") + "user"));
+
+        // return read-article array from userObject
+        var readArticle = userObject["read-article"];
+
+        // get string of article
+        var articleString = JSON.stringify(article);
 
 
+        //check if articleString is in readArticle array
+        if (readArticle.includes(articleString)) {
+                console.log("article read");
+        }
+        else {
+                console.log("article not read");
+                // add articleString to readArticle array
+                readArticle.push(articleString);
+                // update readArticle array in userObject
+                userObject["read-article"] = readArticle;
+                // update userObject in localStorage
+                localStorage.setItem(sessionStorage.getItem("user") + "user", JSON.stringify(userObject));
+        }
+        
 
-        console.log(doc);
 
-
-
-});
 
 });
 
