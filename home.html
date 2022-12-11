@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>RSN Nyheder</title>
 </head>
 <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -10,40 +10,40 @@
     <!--Wrapper class makes sure everything stays on the page - none goes into sides !--> 
     <div class="wrapper">
 
-        <!-- Div for the app title -->
+    <!-- Div for the app title -->
         <div class="app-title">
-            <h1>News App</h1>
+            <h1 style="color: #373c55;">RNS Nyheder</h1>
         </div>
 
-
-        <!-- Div for the login form-->
-        <!-- TASK 1a -->
+    <!-- Div for the login form-->
+    <!-- TASK 1a -->
         <div class="login">
-            <p> Login form here </p>
+            <p style="font-weight: bold; color: #373c55;"> Er du allerede en bruger? Så log ind her! </p>
 
-            <!-- Login form takes text inputs and will run script.js on submit --->
-            <!-- see LOGIN FORM -->
+    <!-- Login form takes text inputs and will run script.js on submit --->
+    <!-- see LOGIN FORM -->
             <form action="home.html" id="loginForm">
-                <input type="text" placeholder="Username" id="username" name="username">
-                <input type="text" placeholder="Password" id="password" name="password">
-                <button type="submit">Login</button>
+                <input type="text" placeholder="Brugernavn" id="username" name="username">
+                <input type="password" placeholder="Adgangskode" id="password" name="password">
+                <button type="submit">Log ind</button>
             </form>
         </div>
 
 
-        <!-- Div for the signup form -->
-        <!-- TASK 2a -->
-        <div class="signup">
-            <p> Signup form here </p>
-
-            <!-- Signup form takes text inputs and will run script.js on submit --->
-            <!-- see SIGNUP FORM -->
-            <form action="home.html" id="signupForm">
-                <input type="text" placeholder="Username" id="new-username" name="new-username">
-                <input type="text" placeholder="Password" id="new-password" name="new-password">
-                <button type="submit">Sign Up</button>
-            </form>
-        </div>
+<!-- Div for the signup form -->
+<!-- TASK 2a -->
+<div class="signup">
+<p style="font-weight: bold; color: #373c55;"> 
+    Har du endnu ikke en bruger? Opret en ny konto her! 
+</p>
+<!-- Signup form takes text inputs and will run script.js on submit --->
+<!-- see SIGNUP FORM -->
+<form action="home.html" id="signupForm">
+<input type="text" placeholder="Opret Brugernavn" id="new-username" name="new-username">
+<input type="password" placeholder="Opret Adgangskode" id="new-password" name="new-password">
+<button type="submit">Opret bruger</button>
+</form>
+</div>
 
 
     </div> 
