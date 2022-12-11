@@ -24,9 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch(articleURL, {mode: "no-cors"}).then((resp) => resp.text()).then(data => {
         // Initialize the document parser
         const parser = new DOMParser();
-        let doc = parser.parseFromString(data, 'text/xml');
+        let doc = parser.parseFromString(data, 'application/xhtml+xml');
+;
 
-        console.log(doc)
+
+
+        console.log(doc);
 
 
 

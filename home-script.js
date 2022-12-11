@@ -67,7 +67,8 @@ loginForm.addEventListener("submit", function(event) {
   // Create a new user object
   let user = {
     "username": username,
-    "password": password
+    "password": password,
+    "fav-cat": null
   };
 
   // create a filename for the user

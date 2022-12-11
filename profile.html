@@ -25,10 +25,10 @@
         <div class="topnav">
         
             <!-- Search form that links to search.html -->
-            <form action="search.html">
+            <form action= "" id="searchForm">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit">Search</button>
-
+            </form>
             <!-- div for the right hand side of the navigation bar to include buttons -->    
             <div class= "topnav-right">
                 
@@ -59,26 +59,25 @@
             <!-- TASK 2c -->
             <p> Change Username </p>
             <!-- Form to change username -->
-            <form action="profile.html" id="changeUsername">
-                <input type="text" placeholder= "New Username" id="change-username" name="change-username">
-                <button type="submit">Change Username</button>
+            <form action="" id="changeUsername">
+                <input type="text" id="newUsername" placeholder="Username">
+                <input type="submit" value="Submit">
             </form>
-            
             <!-- Select favourite categories -->
             <!-- TASK 2d -->
             <p> Select Favourite News Categories </p>
             <!-- Check boxes to select news categories, business, sport, showbiz-->
-            <form action="profile.html">
-                <input type="checkbox" name="business" value="business"> Business<br>
-                <input type="checkbox" name="sport" value="sport"> Sport<br>
-                <input type="checkbox" name="showbiz" value="showbiz"> Showbiz<br>
+            <form action="" id="favouriteCategories">
+                <input type="checkbox" name="category" value="business"> Business<br>
+                <input type="checkbox" name="category" value="sport"> Sport<br>
+                <input type="checkbox" name="category" value="showbiz"> Showbiz<br>
                 <input type="submit" value="Submit">
             </form>
             
             <p> Delete Profile </p>
             <!-- Button to delete profile -->
             <!-- TASK 2b -->
-            <form action="home.html">
+            <form action="" id="deleteUser">
                 <input type="submit" value="Delete Profile">
             </form>
 
