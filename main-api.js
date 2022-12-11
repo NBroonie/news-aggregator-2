@@ -1,4 +1,15 @@
+// #################### DISPLAY LATEST NEWS ####################
 
+// TASK 3a
+
+// here we display the latest news on the main.html page
+// we use DOMContentLoaded to make sure that the content has been loaded and is ready to be changed
+// we get the news data from NewsAPI, the everything endpoint is used to get the latest news
+// to query the API we must include one of q, source, or domain in the query
+// we use q to search for the word world cup, to demonstrate the API.
+// we could have used the topHeadlines endpoint, but there is no way to sort by publishedAt and 
+// therefore may not be the latest news.
+// SEE main.html for the news section
 
 
 // we want to wait until the DOM has loaded before we run our code
@@ -121,8 +132,6 @@ getWeather().then(weather => {
     // get 7 day forecast 4b
     forecast = weather.daily;
 
-
-    // 10/12 WAIT FOR MARIA TO PUSH // 
 
     // create a new array to store the 7 day forecast
     forecast7Day = [];

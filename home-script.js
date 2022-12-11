@@ -3,6 +3,7 @@
 // Users are stored to local storage in the browser
 // Each user is stored in a file with the username as the filename
 // The file contains the user object in JSON format
+// SEE home.html for the signup form
 
 //Get the element for the signup form
 let signupForm = document.getElementById("signupForm");
@@ -19,7 +20,7 @@ signupForm.addEventListener("submit", function(event) {
   let username = document.getElementById("new-username").value;
   let password = document.getElementById("new-password").value;
 
-  // Create a new user object
+  // Create a new user object 
   let user = {
     "username": username,
     "password": password,
@@ -50,7 +51,12 @@ signupForm.addEventListener("submit", function(event) {
 //####################### LOGIN FORM ############################ 
 // TASK 1a
 
+// Users are stored to local storage in the browser
+// Each user is stored in a file with the username as the filename
+// The file contains the user object in JSON format
+// The user is logged in if their credentials are correct
 // Once logged in the user is stored in session storage for use on other pages
+// SEE home.html for login form
 
 //Get the form element by id
 let loginForm = document.getElementById("loginForm");

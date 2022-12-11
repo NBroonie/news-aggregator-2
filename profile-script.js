@@ -1,7 +1,15 @@
 // ####################### Change Username  ############################
 
+// TASK 2c
+
+// The user is able to update their profile by changing their username
+// this method can be applied to other user details
 // on changeUsername form submit
-// alert the user with the new username
+// if a new username is entered we essentially copy the user's details
+// from the current username file to a new file with the new username
+// then we delete the old file
+// we then update the username in sessionStorage
+// SEE profile.html for changeUsername form
 
 var changeUsernameForm = document.getElementById("changeUsername");
 changeUsernameForm.addEventListener("submit", function(event) {
@@ -53,7 +61,17 @@ changeUsernameForm.addEventListener("submit", function(event) {
 
 // ####################### FAVOURITE CATEGORIES ############################
 
+// TASK 2d
 // on favouriteCategories form submit
+// get the checked categories from the form
+// we get ther user details and update their favourite categories
+// we then store the user details back to local storage
+// SEE profile.html for favouriteCategories form
+
+// note that there was no ask to display the user's favourite categories
+// however they could be used as a parameter when calling the API, 
+// similarly to how we will pass parameters in task 3c - search.
+
 
 var favouriteCategoriesForm = document.getElementById("favouriteCategories");
 favouriteCategoriesForm.addEventListener("submit", function(event) {
@@ -96,6 +114,12 @@ favouriteCategoriesForm.addEventListener("submit", function(event) {
   });
 
 // ####################### DELETE ACCOUNT ############################
+
+// TASK 2b
+// Allow the user to delete their own profile
+// on deleteAccount form submit the users data is removed from local
+// and session storage and the user is redirected to the home page
+// SEE profile.html
 
 var deleteAccountForm = document.getElementById("deleteUser");
 deleteAccountForm.addEventListener("submit", function(event) {

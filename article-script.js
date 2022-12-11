@@ -1,4 +1,4 @@
-console.log('script loaded');
+
 
 // domcontentloaded
 document.addEventListener("DOMContentLoaded", function() {
@@ -28,6 +28,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById("article-link").href = url;
 
+
+// ####################### STORE READ ARTICLES ############################
+
+// TASK 2f
+// we will count articles opened on article.html as read articles
+// as we have already stored the articleNumber in sessionStorage
+// and used it to select the article from the news object
+// we check that the article has not already been added to the users read-article array
+// if it has not been added we push the article to the users read-article array
+// there is no requirement to display the users read articles
+// however the articles are stored in the users object in local storage
+// and could be displayed if required
+
+
         // get the userObject from localStorage
         var userObject = JSON.parse(localStorage.getItem(sessionStorage.getItem("user") + "user"));
 
@@ -56,6 +70,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
+
+// ####################### ADD TO FAVOURITES ############################
+
+// TASK 2e
+// on submission of the favouriteArticle form
+// we check whether the article has already been added to the users favourites
+// if it has not been added we push the article to the users favourites array
+// we know which article to pushed by the articleNumber stored in sessionStorage
+// SEE article.html for favouriteArticle form
+
+// note that there is no requirement to display the users favourites
+// however the articles are stored in the users object in local storage
+// and could be displayed if required similar to how we will display
+// the search results for task 3c.
+
+
 
 var favouriteArticleForm = document.getElementById("favouriteArticle");
 favouriteArticleForm.addEventListener("submit", function(event) {
