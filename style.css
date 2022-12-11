@@ -89,13 +89,24 @@ icons to f.ex "Main" and "favorites" when hovering it will change the color to w
 /*User and logout changes to fulfill the design requirements*/
 .topnav-right {
     float: right;
+    margin-top: 0px;
+    display: flex;
 }
     #user-profile{
-color: black;
+color: rgb(15, 12, 12);
 font-weight: bold;
+align-self: flex-start;
+margin-top: 5px;
+}
+        #profilePictureUser{
+max-width: 30px;
+max-height: 32px;
+padding: 2px;
+margin-top: 2px;
+border-radius: 25px;
 }
     #logout-button{
-        color: black;
+        color: grey;
 font-style: italic;
 }
 
@@ -107,13 +118,21 @@ font-style: italic;
     width: 50%;
     height: 100%;
     background-color: #f8f8fa;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: -ms-grid;
 }
+    #NewsHeadline{
+        font-weight: bold;
+   
+    }
 
 .main-rhs {
     float: right;
     width: 50%;
     height: 100%;
     background-color: #f8f8fa;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: -ms-grid;
 }
 
 .favourites {
