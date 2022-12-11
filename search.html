@@ -18,19 +18,54 @@
     <div class="main">
         <div class="topnav">
             <!-- Search bar -->
-            <input type="text" placeholder="Search..">
+            <form action="" id="searchBar">
+            <input type="text" id="searchValue" placeholder="Search..">
+            </form>
             <div class= "topnav-right">
                 <!-- User with link to proile -->
                 <a href="profile.html">User</a>
                 <!-- Link to logout -->
-                <a href="home.html">Logout</a>
+                <a id ="logout-button" href="home.html">Logout</a>   
             </div>
         </div>
+
+        <!-- advanced search bar -->
+        <div id = "advancedSearchBar">
+            Advanced Search: Change Language and Order
+            <form action="" id="advancedSearch">
+                <!-- dropdown for language -->
+                <input list = "language" name="language" placeholder="Language">
+                <datalist id="language">
+                    <option value="en">English</option>
+                    <option value="sv">Swedish</option>
+                    <option value="no">Norwegian</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="es">Spanish</option>
+                </datalist>
+                <!-- dropdown for sortBy -->
+                <input list = "sortBy" name="sortBy" placeholder="Sort by">
+                <datalist id="sortBy">
+                    <option value="relevancy">Most Relevant</option>
+                    <option value="popularity">Most Popular</option>
+                    <option value="publishedAt">Most Recent</option>
+                </datalist>
+                <input type="submit" value="Filter">
+            </form>
+        </div>
+
+
         <div class="search">
-            <!-- Search page here -->
-            <p> Search </p>
+            <table id="searchResults">
+                <tr>
+                    <th>Article Title</th>
+                    <th>Article Link</th>
+                </tr>
+            </table>
         </div>
     </div> 
 </div>
+<script src="script.js"></script>
+<script src="searchScript.js"></script>
 </body>
 </html>

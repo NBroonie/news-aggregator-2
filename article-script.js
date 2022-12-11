@@ -51,9 +51,47 @@ document.addEventListener("DOMContentLoaded", function() {
                 // update userObject in localStorage
                 localStorage.setItem(sessionStorage.getItem("user") + "user", JSON.stringify(userObject));
         }
-        
+
 
 
 
 });
 
+var favouriteArticleForm = document.getElementById("favouriteArticle");
+favouriteArticleForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        console.log('submitted')
+        // get the userObject from localStorage
+        var userObject = JSON.parse(localStorage.getItem(sessionStorage.getItem("user") + "user"));
+        
+        // return fav-article array from userObject
+        var favArticle = userObject["fav-article"];
+        
+        // get the articleNumber from sessionStorage
+        var articleNumber = sessionStorage.getItem("articleNumber");
+        
+        // load news from sessionStorage
+        var news = JSON.parse(sessionStorage.getItem("news"));
+        
+        // news.articles[articleNumber] as string
+        var article = news.articles[articleNumber];
+        
+        // get string of article
+        var articleString = JSON.stringify(article);
+        
+        //check if articleString is in favArticle array
+        if (favArticle.includes(articleString)) {
+                console.log("article already favourited");
+        }
+        else {
+                console.log("article favourited");
+                // add articleString to favArticle array
+                favArticle.push(articleString);
+                // update favArticle array in userObject
+                userObject["fav-article"] = favArticle;
+                // update userObject in localStorage
+                localStorage.setItem(sessionStorage.getItem("user") + "user", JSON.stringify(userObject));
+        }
+
+});

@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- loading icon library from: https://www.w3schools.com/howto/howto_css_search_button.asp -->
+    <link rel="stylesheet" type="bootstrapCDN" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 </head>
-<link rel="stylesheet" type="text/css" href="style.css">
-<!-- loading icon library from: https://www.w3schools.com/howto/howto_css_search_button.asp -->
 
 <body>
 <!--Wrapper class makes sure everything stays on the page - none goes into sides !-->
 <div class="wrapper">
-    
+
     <!-- div for the side navigation bar -->
     <div class="sidenav">       
         <!-- button with link to main page --> 
@@ -31,151 +32,142 @@
           </svg></a>
        
     </div>
-
-    <!-- div for the main body of the page -->
-    <div class="main">
-        <!-- div for the top navigation bar -->
+ <!-- div for the main body of the page -->
+     <div class="main">
+<!-- div for the top navigation bar -->
         <div class="topnav">
-            <!-- Search form that links to search.html -->
-            <div class="topnavSearchbar">
-                <form action="search.html" class="formAction">
+            <div class="row">
+                <div class="col-md-6"> 
+<!-- Search form that links to search.html -->
+                <div class="topnavSearchbar">
+                    <form action="search.html" class="formAction">
     <!-- adding the style within HTML due to limitations in my CSS file. This will ensure that the searchbar stays one size at all times, done to fit "design mock up" requested by examinor -->
                      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11 fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>
                 <input type="text" placeholder="Search for new music, news, artists..." style="width: 220px;" id="search">
-                </form>
-            </div> 
+                    </form>
+                </div> 
+                </div>
 
-
-            <!-- div for the right hand side of the navigation bar to include buttons -->    
-            <div class= "topnav-right">
-                <!-- User with link to proile -->
+                <div class="col-md-6">
+<!-- div for the right hand side of the navigation bar to include buttons -->    
+                    <div class= "topnav-right">
+<!-- User with link to proile -->
                 <a id= "user-profile" href="profile.html">Username
-           <!-- inserting profile picture downloaded from: https://unsplash.com/s/photos/profile-picture-teacher to fullfill requirements for design --> 
+<!-- inserting profile picture downloaded from: https://unsplash.com/s/photos/profile-picture-teacher to fullfill requirements for design --> 
                 </a>
                 <img src="profilePicture.png" alt="profilePicture" id="profilePictureUser">
-                <!-- call script at this point to change the text on the page -->
+ <!-- call script at this point to change the text on the page -->
                 <script>
                     // get the profile element from the page
                     let userprofile = document.getElementById("user-profile");
                     // set the text of the element to the value stored in the session storage                    
                     userprofile.innerHTML = sessionStorage.getItem("user");
                 </script>
-
-                <!-- Link to logout -->
-                <!-- TASK 1B-->
+<!-- Link to logout -->
+<!-- TASK 1B-->
                 <a id ="logout-button" href="home.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-indent" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M3 8a.5.5 0 0 1 .5-.5h6.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H3.5A.5.5 0 0 1 3 8Z"/>
                         <path fill-rule="evenodd" d="M12.5 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5Z"/>
                       </svg>
-                </a>                
+                </a>      
+                </div>
+            </div>              
             </div>
         </div>
-
-        <!-- main content for the page that will be changed for each page -->
-        <div class="main-lhs">
-            <!-- News content here -->
-            <p id="NewsHeadline"> Nyheder </p>
-            <div class="main-article">
+<!-- main content for the page that will be changed for each page -->
+<div class="main-lhs">
+<div class="row">
+<div class="col-md-6"> 
+<!-- News content here -->
+    <h3 id="NewsHeadline"> Nyheder </h3>
+<!-- inserting picture as background in the class for the top left article: https://www.w3schools.com/html/html_images_background.asp -->
+    <div class="main-article" style="background-image: url(football1.jpg); height:300px; width: 100%;" id="p1";>
                 <!-- Div for the lead article -->
                 <div id = "article-0">
                     Article 0
                 </div>
                 <div class="article-foot">
                     <form action="article.html">
-                        <button id="goto-0">Read</button>
+                        <button id="goto-0">Læs mere</button>
                     </form>
                 </div>
             </div>
-            <div class="other-articles">
-                <!-- Divs for the other 6 articles -->
-                <!-- TODO: Set image from main-api.js -->
-                
-                <div class = "other-article">
-                    <!-- Article 1 -->
-                    <div class="article-image">
-                        Article Image here
-                    </div>
-                    <div class="article-title"> 
-                        <p id = "article-1"> Article 1 </p>
-                    </div>
-                    <div class="article-foot">
-                        <button id="goto-1">Read</button>
-                    </div>
-                </div>
 
-                <div class = "other-article">
-                    <!-- Article 2-->
-                    <div class="article-image">
-                        Article Image here
-                    </div>
-                    <div class="article-title"> 
-                        <p id = "article-2"> Article 2 </p>
-                    </div>
-                    <div class="article-foot">
-                        <form action="article.html">
-                            <button id="goto-2">Read</button>
-                        </form>
-                    </div>
-                </div>
 
-                <div class = "other-article">
-                    <!-- Article 3-->
-                    <div class="article-image">
-                        Article Image here
-                    </div> 
-                    <div class="article-title"> 
-                        <p id = "article-3"> Article 3 </p>
-                    </div>
-                    <div class="article-foot">
-                        <button id="goto-3">Read</button>
-                    </div> 
-                </div>
+            <!-- Divs for the other 6 articles -->
+<!-- TODO: Set image from main-api.js  / not able to do this so will insert from folder--> 
 
-                <div class = "other-article">
-                    <!-- Article 4-->
-                    <div class="article-image">
-                        Article Image here
-                    </div>
-                    <div class="article-title"> 
-                        <p id = "article-4"> Article 4 </p>
-                    </div> 
-                    <div class="article-foot">
-                        <button id="goto-4">Read</button>
-                    </div>
-                </div>
+<div class="other-articles">
 
-                <div class = "other-article">
-                    <!-- change -->
-                    <!-- Article 5-->
-                    <div class="article-image">
-                        Article Image here
-                    </div>
-                    <div class="article-title"> 
-                        <p id = "article-5"> Article 5 </p>
-                    </div> 
-                    <div class="article-foot">
-                        <button id="goto-5">Read</button>
-                    </div>
-                </div>
+<!-- Article 1 -->
+<div class = "other-article">
+    <div class="article-title" style="background-image: url(/football2.jpg); height:100%; width:100%" id="p2";> 
+        <h4 id = "article-1"> Article 1 </h4>
+        <div class="article-foot">
+            <button id="goto-1">Læs mere</button>
+         </div>
+    </div>
+</div>
 
-                <div class = "other-article">
-                    <!-- Article 6-->
-                    <div class="article-image">
-                        Article Image here
-                    </div>
-                    <div class="article-title"> 
-                        <p id = "article-6"> Article 6 </p>
-                    </div>
-                    <div class="article-foot">
-                        <button id="goto-6">Read</button>
-                    </div>
-                </div>                   
-
-            </div>
+<!-- Article 2-->
+<div class = "other-article">
+    <div class="article-title" style="background-image: url(/football3.jpg); height:100%; width:100%" id="p3";> 
+        <h4 id = "article-2"> Article 2 </h4>
+        <div class="article-foot">
+            <button id="goto-2">Læs mere</button>
         </div>
+    </div>
+</div>
+
+
+<!-- Article 3-->
+<div class = "other-article">
+    <div class="article-title" style="background-image: url(/football4.jpg); height:100%; width:100%" id="p4";> 
+        <h4 id = "article-3"> Article 3 </h4>
+        <div class="article-foot">
+            <button id="goto-3">Læs mere</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Article 4-->
+<div class = "other-article">
+    <div class="article-title" style="background-image: url(/football5.jpg); height:100%; width:100%" id="p5";> 
+        <h4 id = "article-4"> Article 4 </h4>
+        <div class="article-foot">
+            <button id="goto-4">Læs mere</button>
+        </div>
+    </div>
+</div>
+
+<!-- Article 5-->
+<div class = "other-article">
+    <div class="article-title" style="background-image: url(/football6.jpg); height:100%; width:100%" id="p6";> 
+        <h4 id = "article-5"> Article 5 </h4>
+        <div class="article-foot">
+            <button id="goto-5">Læs mere</button>
+        </div>
+    </div>
+</div>
+
+<!-- Article 6-->
+<div class = "other-article">
+    <div class="article-title" style="background-image: url(/football7.jpg); height:100%; width:100%" id="p7";> 
+        <h4 id = "article-6"> Article 6 </h4>
+        <div class="article-foot">
+            <button id="goto-6">Læs mere</button>
+        </div>
+    </div>
+</div>
+              
+</div>
+</div>
+</div>
+</div>
         <div class="main-rhs">
             <p>Weather</p>
             <!-- Weather content here -->

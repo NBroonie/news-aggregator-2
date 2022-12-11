@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // URL with which to fetch news
 newsURL = 'https://newsapi.org/v2/everything?' +
-            'sources=bbc-news&' +
             'q=world%20cup&' +
             'pageSize=8&' +
             'language=en&' +
@@ -178,7 +177,6 @@ getWeather().then(weather => {
 
     // Citation end
 
-    // 10/12 WAIT FOR MARIA TO PUSH // 
 
 });
 
