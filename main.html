@@ -43,7 +43,7 @@
                 <div class="topnavSearchbar">
                     <form action="search.html" class="formAction">
     <!-- adding the style within HTML due to limitations in my CSS file. This will ensure that the searchbar stays one size at all times, done to fit "design mock up" requested by examinor -->
-                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11 fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>
                 <input type="text" placeholder="Search for new music, news, artists..." style="width: 220px;" id="search">
@@ -188,10 +188,30 @@ due to limited time doing this exam it would become a more complex project to ad
 <div class="weather">
     <h3 id="weatherHead"> Vejr </h3>
     <div id="weather-today">
-        <div id="weather-temp">
-        Temperature here</div>
-        <div id="weather-sunrise"> Icon here</div>
-        <div id="weather-sunset"> Icon here</div>           
+        <div class="weatherContent">
+        <div id="weather-temp">Temperature here</div>
+            Current Weather
+        </div> 
+        <div class="weatherContent">
+            <div class="clockHolder">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+            <div id="weather-sunrise"> Icon here</div>
+                Sunrise
+            </div>
+        </div> 
+        <div class="weatherContent">
+            <div class="clockHolder">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+            <div id="weather-sunset"> Icon here</div>
+                Sunset
+            </div>
+        </div>         
     </div>
 </div>
 

@@ -78,10 +78,13 @@ favouriteCategoriesForm.addEventListener("submit", function(event) {
     // prevent the form from submitting if the user has not entered a new favourite category
     event.preventDefault();
 
+    // 
     var checkboxes = document.getElementsByName("category");
 
     // from checkboxes get the checked categories
     var checkedCategories = [];
+
+    
     for (var i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
             checkedCategories.push(checkboxes[i].value);

@@ -106,6 +106,8 @@ getWeather().then(weather => {
     // get temperature from weather
     temperature = weather.current.temp;
 
+    temperature = temperature + '&#8451;';
+
     // replace the content of the weather-temp element with the temperature
     document.getElementById('weather-temp').innerHTML = temperature;
 
