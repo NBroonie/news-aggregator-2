@@ -154,11 +154,21 @@ getWeather().then(weather => {
         // get the weather
         weather = forecast[i].weather[0].main;
 
+        // get the weather icon code
+        icon = forecast[i].weather[0].icon;
+
+        iconurl = "http://openweathermap.org/img/wn//" + icon + "@2x.png";
+
+        let image = document.createElement('img');
+        image.src = iconurl;
+
+
         // create a new object to store the day, temperature and weather
         dayForecast = {
             day: day,
             temp: temp,
-            weather: weather
+            weather: weather,
+            icon: iconurl
         }
 
         // add the dayForecast object to the forecast7Day array
@@ -175,21 +185,34 @@ getWeather().then(weather => {
           let row = table.insertRow();
           for (key in element) {
             let cell = row.insertCell();
+            if (key == "icon") {
+              let image = document.createElement('img');
+              image.src = element[key];
+                cell.appendChild(image);
+            } else {
+
             let text = document.createTextNode(element[key]);
-            cell.appendChild(text);
+            cell.appendChild(text);}
+
           }
         }
       }
+
       
-      let table = document.getElementById("weather-forecast");
+      let table0 = document.getElementById("weather-forecast");
 //      let data = Object.keys(mountains[0]);
 //      generateTableHead(table, data);
-      generateTable(table, forecast7Day);
+      generateTable(table0, forecast7Day);
+
+    });
+
+
+
+
+
 
     // Citation end
 
-
-});
 
 
 var buttons = document.getElementsByTagName("button");
@@ -211,10 +234,4 @@ var buttons = document.getElementsByTagName("button");
 
 
 });
-
-
-
-
-
-
 
