@@ -110,16 +110,12 @@ border-radius: 25px;
 font-style: italic;
 }
 
-
-
-
 .main-lhs {
     float: left;
     width: 50%;
     height: 100%;
     background-color: #f8f8fa;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: -ms-grid;
 }
     #NewsHeadline{
         font-weight: bold;
@@ -135,10 +131,6 @@ font-style: italic;
     display: -ms-grid;
 }
 
-.favourites {
-    width: 100%;
-    height: 100%;
-    background-color: #f8f8fa;
 }
 
 
