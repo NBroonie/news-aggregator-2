@@ -36,26 +36,25 @@
     <div class="main">
         <!-- div for the top navigation bar -->
         <div class="topnav">
-        
             <!-- Search form that links to search.html -->
             <div class="topnavSearchbar">
-            <form action="search.html" class="hi">
+                <form action="search.html" class="formAction">
     <!-- adding the style within HTML due to limitations in my CSS file. This will ensure that the searchbar stays one size at all times, done to fit "design mock up" requested by examinor -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11 fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                      </svg>
+                    </svg>
                 <input type="text" placeholder="Search for new music, news, artists..." style="width: 220px;" id="search">
-            </form>
+                </form>
             </div> 
 
 
             <!-- div for the right hand side of the navigation bar to include buttons -->    
             <div class= "topnav-right">
-                
                 <!-- User with link to proile -->
-                <a id= "user-profile" href="profile.html">Username</a>
+                <a id= "user-profile" href="profile.html">Username
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMHBpY3R1cmUlMjB0ZWFjaGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60" alt="profilePicture">
+                </a>
                 <!-- call script at this point to change the text on the page -->
-                
                 <script>
                     // get the profile element from the page
                     let userprofile = document.getElementById("user-profile");

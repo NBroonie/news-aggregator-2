@@ -4,6 +4,7 @@ html,body {
     padding:0;
     height:100%;
     background-color: #f8f8fa;
+    display: flex;
 }
 
 .wrapper {
@@ -12,6 +13,7 @@ html,body {
     max-width: max-content;
     margin: 0 auto;
     background-color: #f8f8fa;
+    display: -ms-grid;
 }
 
 .sidenav {
@@ -25,7 +27,6 @@ html,body {
     overflow-x: hidden;
     padding-top: 60px;
 }
-
 /* if the design is changed at any point and we change the
 icons to f.ex "Main" and "favorites" when hovering it will change the color to white*/
 .sidenav a:hover{
@@ -49,7 +50,6 @@ icons to f.ex "Main" and "favorites" when hovering it will change the color to w
     .bi-house-fill, .bi-suit-heart-fill{
         color: black;
         background-color: white;
-
    }
 
 .main {
@@ -59,30 +59,48 @@ icons to f.ex "Main" and "favorites" when hovering it will change the color to w
     top: 0;
     background-color: #f8f8fa;
 }
-
+/* Searchbar changes */
 .topnav {
     overflow: hidden;
     height: 50px;
     background-color: #ffffff;
     width: 100%;
 }
-
 .topnavSearchbar{
     padding: 3px;
     color: grey;
     float: left;
     border-color: white;
 }
-
-#search{
-    border-radius: 40px;
+    #search{
+    border-radius: 5px;
+    border-width: 1px;
+    border-left: 5px;
+    border-left-color: white;
     border-color: lightgray;
 }
+    .formAction{
+    padding: 3px;
+    color: grey;
+    float: left;
+    border-color: white;
+}
 
+/*User and logout changes to fulfill the design requirements*/
 .topnav-right {
     float: right;
-    
 }
+    #user-profile{
+color: black;
+font-weight: bold;
+}
+    #logout-button{
+        color: black;
+font-style: italic;
+}
+
+
+
 
 .main-lhs {
     float: left;
