@@ -1,4 +1,6 @@
+// ####################### LOAD ARTICLE ############################
 
+// TASK 3b
 
 // domcontentloaded
 document.addEventListener("DOMContentLoaded", function() {
@@ -94,19 +96,14 @@ favouriteArticleForm.addEventListener("submit", function(event) {
         console.log('submitted')
         // get the userObject from localStorage
         var userObject = JSON.parse(localStorage.getItem(sessionStorage.getItem("user") + "user"));
-        
         // return fav-article array from userObject
         var favArticle = userObject["fav-article"];
-        
         // get the articleNumber from sessionStorage
         var articleNumber = sessionStorage.getItem("articleNumber");
-        
         // load news from sessionStorage
         var news = JSON.parse(sessionStorage.getItem("news"));
-        
         // news.articles[articleNumber] as string
         var article = news.articles[articleNumber];
-        
         // get string of article
         var articleString = JSON.stringify(article);
         

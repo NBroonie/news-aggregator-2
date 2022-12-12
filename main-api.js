@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // NEWSAPI KEY: cfdaace3822b4de588df6319336c65c2
 
-
 // URL with which to fetch news
 newsURL = 'https://newsapi.org/v2/everything?' +
             'q=world%20cup&' +
@@ -40,10 +39,8 @@ async function getNews() {
     // convert the response to json
     var news = await response.json();
     console.log(news);
-
     // store news in sessionStorage
     sessionStorage.setItem('news', JSON.stringify(news));
-
     // return news after it has been fetched
     return news;
 
@@ -51,17 +48,13 @@ async function getNews() {
 
 // call the getNews function to fetch the news data
 getNews().then(news => {
-
     // for each article in the news object
     // replace the content of the article with the article title
     for (let i = 0; i < 7; i++) {
-
         // replace the content at article-i with the title of the article
         document.getElementById('article-' + i).innerHTML = news.articles[i].title;     
         
         // JSON key for the article image not available
-        // TODO - find a way to get the image or replace with a default image
-
     }});
 
 
@@ -111,7 +104,7 @@ getWeather().then(weather => {
     // replace the content of the weather-temp element with the temperature
     document.getElementById('weather-temp').innerHTML = temperature;
 
-    // TASK 4d
+    // TASK 4d & 4e
     // get sunrise and sunset from weather
 
 
@@ -147,21 +140,15 @@ getWeather().then(weather => {
         day = new Date(day*1000);
         // get the day of the week from the date
         day = day.toDateString().split(' ')[0];
-
         // get the temperature
         temp = forecast[i].temp.day;
-
         // get the weather
         weather = forecast[i].weather[0].main;
-
         // get the weather icon code
         icon = forecast[i].weather[0].icon;
-
         iconurl = "http://openweathermap.org/img/wn//" + icon + "@2x.png";
-
         let image = document.createElement('img');
         image.src = iconurl;
-
 
         // create a new object to store the day, temperature and weather
         dayForecast = {
@@ -170,13 +157,10 @@ getWeather().then(weather => {
             weather: weather,
             icon: iconurl
         }
-
         // add the dayForecast object to the forecast7Day array
         forecast7Day.push(dayForecast);
 
     }
-
-
 
     // Citation: https://www.valentinog.com/blog/html-table/
 
@@ -205,11 +189,6 @@ getWeather().then(weather => {
       generateTable(table0, forecast7Day);
 
     });
-
-
-
-
-
 
     // Citation end
 

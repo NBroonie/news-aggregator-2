@@ -1,4 +1,6 @@
+// ######### SEARCH ON 2+ PARAMETERS ####################
 
+// TASK 3c
 
 document.addEventListener('DOMContentLoaded', function() {
     
@@ -86,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // get the inputs from the advanced search form
 var advancedSearchForm = document.getElementById("advancedSearch");
 advancedSearchForm.addEventListener("submit", function(event) {
+    event.preventDefault();
     console.log('advanced search form submitted');
     var language = document.getElementsByName("language").value;
     var sortBy = document.getElementsByName("sortBy").value;
@@ -98,7 +101,31 @@ advancedSearchForm.addEventListener("submit", function(event) {
 });
 
 
+//####################### SEARCH BAR ############################
 
+var searchBarForm = document.getElementById("searchBar");
+// add event listener to searchBarForm on enter
+searchBarForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        // get search value from search bar
+        var searchValue = document.getElementById("searchValue").value;
+        // set search value in sessionStorage
+        sessionStorage.setItem("searchValue", searchValue);
+
+        // set default language to english
+        var language = "en";
+        // set language in sessionStorage
+        sessionStorage.setItem("language", language);
+
+        // set sortBY to publishedAt
+        var sortBy = "publishedAt";
+        // set sortBy in sessionStorage
+       sessionStorage.setItem("sortBy", sortBy);
+
+
+        // redirect to search.html
+        window.location.href = "search.html";
+});
 
 
 

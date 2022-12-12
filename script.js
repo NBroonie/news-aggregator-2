@@ -23,31 +23,7 @@ logoutbutton.addEventListener("click", function(){
     sessionStorage.clear();
 });
 
-//####################### SEARCH BAR ############################
 
-//var searchBarForm = document.getElementById("searchBar");
-//// add event listener to searchBarForm on enter
-//searchBarForm.addEventListener("submit", function(event) {
-//        event.preventDefault();
-//        // get search value from search bar
-//        var searchValue = document.getElementById("searchValue").value;
-//        // set search value in sessionStorage
-//        sessionStorage.setItem("searchValue", searchValue);
-//
-//        // set default language to english
-//        var language = "en";
-//        // set language in sessionStorage
-//        sessionStorage.setItem("language", language);
-//
-//        // set sortBY to publishedAt
-//        var sortBy = "publishedAt";
-//        // set sortBy in sessionStorage
-//       sessionStorage.setItem("sortBy", sortBy);
-//
-//
-//        // redirect to search.html
-//        window.location.href = "search.html";
-//});
 
 
 
